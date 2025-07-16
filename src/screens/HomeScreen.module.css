@@ -1,0 +1,37 @@
+.container {
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+}
+
+.assetContainer {
+  margin-right: 20px;
+  text-align: center;
+}
+
+.asset {
+  width: 450px;
+  height: 200px;
+  background-color: rgb(59, 59, 59);
+  transition: all var(--animation-duration) ease-in-out;
+}
+.focused {
+  box-shadow: 0 0 0 8px var(--focus);
+  background-color: tomato;
+  scale: 1.05;
+}
+
+.curosel {
+  margin-top: 30px;
+  padding-left: 10px;
+  margin-right: 20px;
+}
+
+.text {
+  margin-top: 20px;
+  color: transparent;
+  transition: all var(--animation-duration) ease-in-out;
+}
+.textfocused {
+  color: white;
+}

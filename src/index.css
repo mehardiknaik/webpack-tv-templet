@@ -1,0 +1,39 @@
+html {
+  --height: 1080px;
+  --width: 1920px;
+  font-size: 50px;
+  --pixel-ratio: 0.6666666666666666;
+  --focus: #ffffff;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  height: var(--height);
+  width: var(--width);
+  overflow: hidden;
+  background: black;
+  color: #fff;
+}
+
+button,
+body {
+  font-size: 1rem;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+#root {
+  height: var(--height);
+  width: var(--width);
+  overflow: hidden;
+  transform: scale(var(--pixel-ratio));
+  transform-origin: top left;
+}
+
+.animation {
+  transition: all var(--animation-duration);
+}

@@ -1,0 +1,5 @@
+.container {
+  height: var(--height);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
