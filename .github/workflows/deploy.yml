@@ -55,10 +55,10 @@ jobs:
 
       - name: Build the app
         run: |
-          if [ "${{ github.event.inputs.platform }}" == "tizen" ]; then
-            npm run build:tizen
-          else
+          if [ "${{ github.event.inputs.platform }}" == "web" ]; then
             npm run build
+          else
+            npm run build:${{ github.event.inputs.platform }}
           fi
 
       - name: Setup Pages
