@@ -25,7 +25,7 @@ export interface PageContextProps extends Location {
 
 // Default context values
 const defaultContext: PageContextProps = {
-  pageInView: false,
+  pageInView: true,
   focusKey: '',
   hash: '',
   key: '',
@@ -75,7 +75,8 @@ const AliveWithState: FC<AliveWithStateProps> = ({ Component, props, location })
   const { ref, focusKey, focusSelf } = useFocusable({
     trackChildren: true,
     focusBoundaryDirections: ['down', 'up', 'right', 'left'],
-    isFocusBoundary: true
+    isFocusBoundary: true,
+    focusable: pageInView
   });
 
   // Initial mount

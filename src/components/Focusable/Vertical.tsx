@@ -9,6 +9,7 @@ import { Children, cloneElement, useCallback, useEffect } from 'react';
 import screen from '../../util/Screen';
 import { ScrollContext } from './ScrollProvider';
 import platform from '../../util/platform';
+import scrollHandler from '../../util/Scroll/ScrollHandler';
 
 let styles: any = {};
 styles = platform({
@@ -40,7 +41,7 @@ const Vertical: React.FC<VerticalProps> = ({
       if (!ref.current) return;
       const dom = ref.current?.getBoundingClientRect();
       const v = Math.max(y + height - dom?.height / screen.pixelRatio, 0);
-      ref.current.style.transform = `translateY(-${v}px)`;
+      scrollHandler(ref.current, v, 'y');
     },
     [ref]
   );

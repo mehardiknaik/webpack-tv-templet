@@ -1,0 +1,24 @@
+.hero {
+  height: 600px;
+  background: tomato;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 50px;
+}
+.button {
+  width: fit-content;
+  padding: 30px;
+  border-radius: 11px;
+  background: #8100ff;
+}
+.focused {
+  box-shadow: 0 0 0 8px var(--focus);
+}
+.buttons {
+  display: flex;
+  margin-top: 20px;
+}
+.buttons > * {
+  margin-right: 40px;
+}
