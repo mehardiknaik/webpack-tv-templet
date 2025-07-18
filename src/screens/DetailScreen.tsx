@@ -33,10 +33,10 @@ const DetailScreen = () => {
           </div>
         </div>
       </Focusable>
-      {rows.map((row, index) => (
+      {rows.map((row) => (
         <Focusable className={style.container} key={row.title} trackChildren>
           <div>{row.title}</div>
-          <Curosel className={style.curosel} autoFocus={!index}>
+          <Curosel className={style.curosel}>
             {assets.map((asset) => (
               <Focusable className={style.assetContainer} key={asset.title}>
                 {({ focused }) => (

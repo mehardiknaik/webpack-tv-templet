@@ -74,8 +74,6 @@ const AliveWithState: FC<AliveWithStateProps> = ({ Component, props, location })
 
   const { ref, focusKey, focusSelf } = useFocusable({
     trackChildren: true,
-    focusBoundaryDirections: ['down', 'up', 'right', 'left'],
-    isFocusBoundary: true,
     focusable: pageInView
   });
 
